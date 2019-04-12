@@ -1,0 +1,11 @@
+C:\Users\Geovanny\source\repos\1clase\1clase\obj\Debug\netcoreapp2.1\1clase.vbprojAssemblyReference.cache
+C:\Users\Geovanny\source\repos\1clase\1clase\obj\Debug\netcoreapp2.1\1clase.vbproj.CoreCompileInputs.cache
+C:\Users\Geovanny\source\repos\1clase\1clase\obj\Debug\netcoreapp2.1\1clase.AssemblyInfoInputs.cache
+C:\Users\Geovanny\source\repos\1clase\1clase\obj\Debug\netcoreapp2.1\1clase.AssemblyInfo.vb
+C:\Users\Geovanny\source\repos\1clase\1clase\bin\Debug\netcoreapp2.1\1clase.deps.json
+C:\Users\Geovanny\source\repos\1clase\1clase\bin\Debug\netcoreapp2.1\1clase.runtimeconfig.json
+C:\Users\Geovanny\source\repos\1clase\1clase\bin\Debug\netcoreapp2.1\1clase.runtimeconfig.dev.json
+C:\Users\Geovanny\source\repos\1clase\1clase\bin\Debug\netcoreapp2.1\1clase.dll
+C:\Users\Geovanny\source\repos\1clase\1clase\bin\Debug\netcoreapp2.1\1clase.pdb
+C:\Users\Geovanny\source\repos\1clase\1clase\obj\Debug\netcoreapp2.1\1clase.dll
+C:\Users\Geovanny\source\repos\1clase\1clase\obj\Debug\netcoreapp2.1\1clase.pdb
