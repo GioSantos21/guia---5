@@ -3,7 +3,7 @@ Imports System
 Module Program
     Sub Main()
         While True
-            Console.Write("Elija una opción <1-5>: ")
+            Console.Write("Si desea salir del programa presione la tecla <0>" + vbCrLf + "" + vbCrLf + "1. Hola mundo." + vbCrLf + "2. Mostrar información sobre vehiculos." + vbCrLf + "3. Vehiculo B, Método Get and Set." + vbCrLf + "4. Cuenta Bancaria." + vbCrLf + "5. Calculadora." + vbCrLf + "" + vbCrLf + "Elija una opción <1-5>: ")
             Dim respuesta As Integer = Console.ReadLine()
             Console.WriteLine()
             If respuesta = 1 Then
@@ -64,16 +64,31 @@ Module Program
                     Console.Write("" + vbCrLf + "Ingrese la cantidad de dinero que posee en su cuenta: $")
                     Dim inicio As Double = Console.ReadLine()
                     usuario1.balance = inicio
-                    Console.Write("" + vbCrLf + "¿Qué operación desea realizar?" + vbCrLf + "1. Depositar" + vbCrLf + "2. Retirar" + vbCrLf + "3. Mostrar la cantidad de dinero" + vbCrLf + ":")
+                    Dim salir As Integer = 1
+                    While salir <> 0
+                        Console.Write("" + vbCrLf + "¿Qué operación desea realizar?" + vbCrLf + "1. Depositar" + vbCrLf + "2. Retirar" + vbCrLf + "3. Mostrar la cantidad de dinero" + vbCrLf + ":")
                     Dim operacion As Integer = Console.ReadLine()
-                    If operacion = 1 Then
-                        usuario1.Depositar()
-                        Exit While
-                    ElseIf operacion = 2 Then
-                        usuario1.Retirar()
-                        Exit While
-                    ElseIf operacion = 3 Then
-                        usuario1.MostrarBalance()
+                        If operacion = 1 Then
+                            usuario1.Depositar()
+                            salir = 0
+                        ElseIf operacion = 2 Then
+                            usuario1.Retirar()
+                            salir = 0
+                        ElseIf operacion = 3 Then
+                            usuario1.MostrarBalance()
+                            salir = 0
+                        Else
+                            Console.WriteLine("" + vbCrLf + "ERROR. Opción fuera de rango")
+                            Continue While
+                        End If
+                    End While
+                    Console.Write("¿Desea continuar ingresando datos? Presione <Y> si desea seguir o cualquier otra letra para salir <X>: ")
+                    Dim sigo As String = Console.ReadLine()
+                    If sigo = "y" Or sigo = "Y" Then
+                        Console.WriteLine()
+                        Continue While
+                    Else
+                        Console.WriteLine()
                         Exit While
                     End If
                 End While
@@ -86,25 +101,36 @@ Module Program
                         Case 1
                             Dim sume As Calculadora = New Calculadora
                             sume.suma()
-                            Exit While
                         Case 2
                             Dim reste As Calculadora = New Calculadora
                             reste.resta()
-                            Exit While
                         Case 3
                             Dim multi As Calculadora = New Calculadora
                             multi.multiplicacion()
-                            Exit While
                         Case 4
                             Dim div As Calculadora = New Calculadora
                             div.division()
-                            Exit While
                         Case 5
                             Dim all As Calculadora = New Calculadora
                             all.todas()
-                            Exit While
+                        Case Else
+                            Console.WriteLine("ERROR. Opción fuera de rango." + vbCrLf + "")
+                            Continue While
                     End Select
+                    Console.Write("¿Desea continuar ingresando datos? Presione <Y> si desea seguir o cualquier otra letra para salir <X>: ")
+                    Dim sigo As String = Console.ReadLine()
+                    If sigo = "y" Or sigo = "Y" Then
+                        Console.WriteLine()
+                        Continue While
+                    Else
+                        Console.WriteLine()
+                        Exit While
+                    End If
                 End While
+            ElseIf respuesta = 0 Then
+                Exit While
+            Else
+                Console.WriteLine("ERROR. Opción fuera de rango." + vbCrLf + "")
             End If
         End While
     End Sub
